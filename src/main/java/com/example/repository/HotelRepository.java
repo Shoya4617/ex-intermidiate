@@ -41,7 +41,8 @@ public class HotelRepository {
 	
 	
 	/**
-	 * 希望価格以下の価格でホテルを検索するためのメソッド
+	 * 希望価格以下の価格でホテルを検索するためのメソッド.
+	 * 
 	 * @param price 希望価格
 	 * @return 検索したホテルの一覧
 	 */
