@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.Team;
 import com.example.service.TeamService;
 
+/**
+ * コントローラークラス
+ * @author yamaseki
+ *
+ */
 @Controller
 @RequestMapping("/")
 public class TeamController {
@@ -18,6 +23,11 @@ public class TeamController {
 	private TeamService service;
 	
 	
+	/**
+	 * 野球チーム一覧を表示するためのメソッド.
+	 * @param model　リクエストスコープ
+	 * @return チーム一覧画面
+	 */
 	@RequestMapping("")
 	public String index(Model model) {
 		List<Team>teamList = service.showList();
@@ -26,6 +36,12 @@ public class TeamController {
 		return "team-index";
 	}
 	
+	/**
+	 * チーム詳細画面を表示するためのメソッド.
+	 * @param id
+	 * @param model リクエストスコープ
+	 * @return チーム詳細画面
+	 * */
 	@RequestMapping("/teamDetail")
 	public String showDetail(Integer id,Model model) {
 		Team team = service.findById(id);

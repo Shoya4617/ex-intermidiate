@@ -1,28 +1,36 @@
 package com.example.domain;
 
+/**
+ * 野球チームのドメイン
+ * 
+ * @author yamaseki
+ *
+ */
 public class Team {
-	
+
+	/** id */
 	private Integer id;
+	/** リーグ名 */
 	private String leagueName;
+	/** チーム名 */
 	private String teamName;
+	/** 本拠地 */
 	private String headQuarters;
+	/** 発足 */
 	private String inauguration;
+	/** 歴史 */
 	private String history;
-	
+
 	public Team() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	@Override
 	public String toString() {
 		return "Team [id=" + id + ", leagueName=" + leagueName + ", teamName=" + teamName + ", headQuarters="
 				+ headQuarters + ", inauguration=" + inauguration + ", history=" + history + "]";
 	}
-
-
 
 	public Integer getId() {
 		return id;
@@ -71,11 +79,5 @@ public class Team {
 	public void setHistory(String history) {
 		this.history = history;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
